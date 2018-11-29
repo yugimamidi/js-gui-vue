@@ -73,7 +73,7 @@ An example is shown below.
 
 - [js-console](https://github.com/profcase/js-console)
 - [js-gui](https://github.com/profcase/js-gui)
-- [js-gui-vue](https://github.com/profcase/js-gui-vue)
+- [js-gui-vue](https://github.com/denisecase/js-gui-vue)
 - [js-gui-storage](https://github.com/profcase/js-gui-storage)
 - [js-node](https://github.com/profcase/js-node)
 - [js-node-express](https://github.com/profcase/js-node-express)
