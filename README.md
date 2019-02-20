@@ -1,8 +1,13 @@
 # js-gui-vue
 
-> JavaScript is a great language for writing and testing quick apps with user interaction. 
-> 
+> JavaScript is a great language for writing and testing quick apps with user interaction.
+>
 > Vue.js is an easy addition that enables two-way data binding (immediate updates are easy and no more 'document.getElementById')
+
+## Links
+
+- [Demo](https://profcase.github.io/js-gui-vue/)
+- [Source](https://github.com/profcase/js-gui-vue)
 
 ## Requirements
 
@@ -67,6 +72,8 @@ An example is shown below.
 ## Resources
 
 - [Bootstrap Material Design CDN](https://mdbootstrap.com/md-bootstrap-cdn/)
+- [HTML Validator](https://validator.w3.org/)
+- [JavaScript Standard Style Validator](https://standardjs.com/demo.html)
 - [Vue.js JavaScript framework CDN](https://vuejs.org/v2/guide/installation.html) - small, incrementally-adoptable framework for JavaScript user interfaces
 
 ## See Also

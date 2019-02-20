@@ -1,15 +1,14 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <title>Interactive App</title>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +18,7 @@
     <h3>Two-way data binding watches for changes in inputs and automatically updates outputs.</h3>
 
     <p>Enter your name:
-      <input v-model="guest" type="string">
+      <input v-model="guest" type="text">
     </p>
 
     <p>Enter first number:
@@ -34,25 +33,25 @@
 
   </main>
 
-  <!-- Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <!-- Vue.js must be added before our custom code -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 
   <script>
-    console.log("SCRIPT START")
+    console.log('SCRIPT START')
 
-    console.log("Declare functions..............................")
+    console.log('Declare testable functions.....................')
 
     function add(x, y) {
       return x + y
     }
-    console.log("add=" + add)
+    console.log('add=' + add)
 
-    console.log("Specify Vue components .......................")
+    console.log('Specify Vue components .......................')
 
     new Vue({
-      el: "#vue-app",
+      el: '#vue-app',
       data: {
-        guest: "Lilly",
+        guest: 'Lilly',
         firstNumber: 5,
         secondNumber: 3
       },
@@ -60,22 +59,22 @@
         result() {
           const i = parseInt(this.firstNumber)
           const j = parseInt(this.secondNumber)
-          return this.guest + ", your sum is " + add(i, j) + "."
+          return this.guest + ', your sum is ' + add(i, j) + '.'
         }
       }
     })
 
-    console.log("SCRIPT END")
+    console.log('SCRIPT END')
   </script>
 
   <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/js/mdb.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
 
 </body>
 
