@@ -35,9 +35,9 @@
 
 First add Vue.js with a script element pointing to the CDN source before your custom code.
 
-```JavaScript
+```HTML
   <!-- Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 ```
 
 Then, remove any calculational event handlers, and instead, specify your Vue components. For each new Vue component, define:
@@ -50,12 +50,12 @@ An example is shown below.
 
 ```JavaScript
 
- console.log("Specify root Vue instance .......................")
+   console.log('Specify Vue components .......................')
 
     new Vue({
-      el: "#vue-app",
+      el: '#vue-app',
       data: {
-        guest: "Lilly",
+        guest: 'Lilly',
         firstNumber: 5,
         secondNumber: 3
       },
@@ -63,7 +63,7 @@ An example is shown below.
         result() {
           const i = parseInt(this.firstNumber)
           const j = parseInt(this.secondNumber)
-          return this.guest + ", your sum is " + add(i, j) + "."
+          return this.guest + ', your sum is ' + add(i, j) + '.'
         }
       }
     })
