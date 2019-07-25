@@ -78,9 +78,12 @@ An example is shown below.
 
 ## See Also
 
+- [js-colors](https://github.com/profcase/js-colors)
 - [js-console](https://github.com/profcase/js-console)
+- [js-e1](https://github.com/profcase/js-e1)
 - [js-gui](https://github.com/profcase/js-gui)
-- [js-gui-vue](https://github.com/denisecase/js-gui-vue)
 - [js-gui-storage](https://github.com/profcase/js-gui-storage)
-- [js-node](https://github.com/profcase/js-node)
-- [js-node-express](https://github.com/profcase/js-node-express)
+- [js-gui-vue](https://github.com/denisecase/js-gui-vue)
+- [js-node](https://github.com/denisecase/js-node)
+- [js-node-express](https://github.com/denisecase/js-node-express)
+
