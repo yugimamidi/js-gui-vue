@@ -2,56 +2,98 @@
 <html lang="en">
 
 <head>
-  <title>Interactive App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Vue.js App</title>
+
+  <meta name="description" content="Client-side app illustrating two-way data binding with Vue.js">
+  <meta name="author" content="Denise Case">
+
+  <!-- get current Bootstrap Material Design styles from https://mdbootstrap.com/md-bootstrap-cdn/ -->
+
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+
+  <!-- required for sticky footer -->
+  <style>
+    body,
+    .sticky-footer-wrapper {
+      min-height: 100vh;
+    }
+  </style>
+
 </head>
 
-<body>
-  <main class="container-fluid" id="vue-app">
+<body class="d-flex flex-column sticky-footer-wrapper">
+  <main class="container mt-5 flex-fill" id="vue-app">
 
-    <h1>JavaScript + Vue.js for interactive apps!</h1>
-    <h3>Two-way data binding watches for changes in inputs and automatically updates outputs.</h3>
+    <!--Container has rows - first row -->
+    <div class="row">
 
-    <p>Enter your name:
-      <input v-model="guest" type="text">
-    </p>
+      <!--Rows have columns - column 1 -->
+      <div class="col-md-4 mb-4">
 
-    <p>Enter first number:
-      <input v-model="firstNumber" type="number">
-    </p>
+        <h2>Vue.js for interactive apps</h2>
+        <p>Two-way data binding listens for changes and automatically updates.</p>
 
-    <p>Enter second number:
-      <input v-model="secondNumber" type="number">
-    </p>
+        <fieldset class="mt-4">
+          <label for="guest">Enter your name (2 to 40 characters):</label>
+          <input v-model="guest" id="guest" type="text" minlength="2" maxlength="40">
+        </fieldset>
 
-    <p>{{result}}</p>
+        <fieldset class="mt-4">
+          <label for="firstNumber">Enter first number (1 to 100):</label>
+          <input v-model="firstNumber" id="firstNumber" type="number" min="1" max="100">
+          <span id="firstWarning" class="text-danger"></span>
+        </fieldset>
+
+        <fieldset class="mt-4">
+          <label for="secondNumber">Enter second number (1 to 100):</label>
+          <input v-model="secondNumber" id="secondNumber" type="number" min="1" max="100">
+          <span id="secondWarning" class="text-danger"></span>
+        </fieldset>
+
+        <p class="mt-4">{{result}}</p>
+
+      </div>
+      <!--end column 1-->
+
+    </div>
+    <!-- end row 1 -->
 
   </main>
+
+  <!-- sticky footer with padding on y-axis (top and bottom) -->
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Right-click / Inspect / Console</span>
+      &#9670;
+      <a href="https://denisecase.github.io/js-gui-vue/">Demo</a>
+      &#9670;
+      <a href="https://github.com/denisecase/js-gui-vue">Source</a>
+    </div>
+  </footer>
 
   <!-- Vue.js must be added before our custom code -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 
   <script>
-    console.log('SCRIPT START')
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
-    }
-    console.log('add=' + add)
+    const add = (x, y) => { return x + y }
 
     console.log('Specify Vue components .......................')
 
     new Vue({
       el: '#vue-app',
       data: {
-        guest: 'Lilly',
+        guest: 'Emmett',
         firstNumber: 5,
         secondNumber: 3
       },
@@ -64,17 +106,12 @@
       }
     })
 
-    console.log('SCRIPT END')
   </script>
 
-  <!-- JQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
 
 </body>
 
