@@ -58,7 +58,7 @@ An example is shown below.
         secondNumber: 3
       },
       computed: {
-        result() {
+        result: function() {
           const i = parseInt(this.firstNumber)
           const j = parseInt(this.secondNumber)
           return this.guest + ', your sum is ' + add(i, j) + '.'
