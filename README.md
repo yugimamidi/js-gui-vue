@@ -21,22 +21,28 @@
 - Easy-to-style with a CSS CDN link
 - Easy-to-use Vue components with a Vue.js CDN link
 
-## Converting the HTML to use Vue
+## No Build Tools Required
 
-1. Wrap the component in an HTML tag and specify the component id (e.g. vue-app)
-2. Convert each input HTML element 'id' attribute to 'v-model' attribute
-3. Remove any input default values from the HTML input elements
-4. If you have a button to trigger an update event, you can delete it. Vue will automatically update results as inputs change.
-5. Covert output HTML elements to use {{identifier}} for inner HTML. The 'id' attribute is not needed for updating the data and can be removed.
+- This example does not require any build tools
 
-## Specifying the Vue Component
+## Converting an App to use Vue
 
-First add Vue.js with a script element pointing to the CDN source before your custom code.
+1. Create a wrapper component and assign an id
+2. For each data element, duplicate the 'id' attribute as a 'v-model' attribute
+3. Remove any default values from the HTML input elements
+4. If you used a button to trigger an update event, you can delete it. Vue will automatically update results as inputs change.
+5. Covert output HTML elements to use {{identifier}} for the inner HTML. The 'id' attribute is not needed for updating the data and can be removed.
+
+## Adding Vue from CDN
+
+Add Vue.js with a script element pointing to the CDN source.
 
 ```HTML
-  <!-- Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+  <!-- Before custom code, add Vue.js from https://cdnjs.com/libraries/vue -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
 ```
+
+## Specifying Vue Compoents
 
 Then, remove any calculational event handlers, and instead, specify your Vue components. For each new Vue component, define:
 
@@ -47,24 +53,25 @@ Then, remove any calculational event handlers, and instead, specify your Vue com
 An example is shown below.
 
 ```JavaScript
+// testable function
+const add = (x, y) => { return x + y }
 
-   console.log('Specify Vue components .......................')
-
-    new Vue({
-      el: '#vue-app',
-      data: {
-        guest: 'Lilly',
-        firstNumber: 5,
-        secondNumber: 3
-      },
-      computed: {
-        result: function() {
-          const i = parseInt(this.firstNumber)
-          const j = parseInt(this.secondNumber)
-          return this.guest + ', your sum is ' + add(i, j) + '.'
-        }
-      }
-    })
+// new Vue component
+const adder = new Vue({
+  el: '#adder',
+  data: {
+    guest: 'Emmett',
+    firstNumber: 5,
+    secondNumber: 3
+  },
+  computed: {
+    result: function () {
+      const i = parseInt(this.firstNumber)
+      const j = parseInt(this.secondNumber)
+      return `${this.guest}, your sum is ${add(i, j)}.`
+    }
+  }
+})
 ```
 
 ## Resources
@@ -77,4 +84,3 @@ An example is shown below.
 ## See Also
 
 - [More App Examples](https://profcase.github.io/web-apps-list/)
-
