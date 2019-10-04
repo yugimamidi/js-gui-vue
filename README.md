@@ -81,6 +81,10 @@ const adder = new Vue({
 - [JavaScript Standard Style Validator](https://standardjs.com/demo.html)
 - [Vue.js JavaScript framework CDN](https://vuejs.org/v2/guide/installation.html) - small, incrementally-adoptable framework for JavaScript user interfaces
 
+## Expanded Examples
+
+
+
 ## See Also
 
 - [More App Examples](https://profcase.github.io/web-apps-list/)
